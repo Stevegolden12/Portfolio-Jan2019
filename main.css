@@ -2,3 +2,42 @@
 body {
 
 }
+
+.index__mainWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    'leftCol mLeftCol mRightCol rightCol';
+  height: 100vh;
+}
+
+.index__leftCol {
+  grid-area: leftCol;
+}
+
+.index__middleLeftCol {
+  grid-area: mLeftCol;
+}
+
+.index__middleRightCol {
+  grid-area: mRightCol;
+}
+
+.index__rightCol {
+  grid-area: rightCol;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.index__navLinks {
+  list-style: none;
+}
+
+.fas,
+.fab {
+  text-decoration: none;
+  font-size: 3vmax;
+}
