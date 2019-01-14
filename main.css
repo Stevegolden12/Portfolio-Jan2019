@@ -5,10 +5,10 @@ body {
 
 .index__mainWrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 2fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas:
-    'leftCol mLeftCol mRightCol rightCol';
+    'leftCol mCol rightCol';
   height: 100vh;
 }
 
@@ -16,12 +16,52 @@ body {
   grid-area: leftCol;
 }
 
-.index__middleLeftCol {
-  grid-area: mLeftCol;
+/* card Flip */
+.scene {
+  width: 100%;
+  height: 100%;
+  perspective: 600px;
 }
 
-.index__middleRightCol {
-  grid-area: mRightCol;
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card__face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: purple;
+  background-image: url(./img/mandala.svg)
+}
+
+.card__face--back {
+  transform: rotateY( 180deg );
+  background-image: url(./img/mandala.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+svg:hover {
+  fill: red;
+}
+
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+/* end of card flip*/
+
+.index__middleCol {
+  grid-area: mCol;
 }
 
 .index__rightCol {
