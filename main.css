@@ -5,10 +5,10 @@ body {
 
 .index__mainWrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 2fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas:
-    'leftCol mLeftCol mRightCol rightCol';
+    'leftCol mCol rightCol';
   height: 100vh;
 }
 
@@ -39,12 +39,19 @@ body {
 }
 
 .card__face--front {
-  background: red;
+  background: purple;
+  background-image: url(./img/mandala.svg)
 }
 
 .card__face--back {
-  background: blue;
   transform: rotateY( 180deg );
+  background-image: url(./img/mandala.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+svg:hover {
+  fill: red;
 }
 
 
@@ -53,12 +60,8 @@ body {
 }
 /* end of card flip*/
 
-.index__middleLeftCol {
-  grid-area: mLeftCol;
-}
-
-.index__middleRightCol {
-  grid-area: mRightCol;
+.index__middleCol {
+  grid-area: mCol;
 }
 
 .index__rightCol {
