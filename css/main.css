@@ -39,51 +39,58 @@ body {
 }
 
 .card__face--front {
-  background-image: url(./img/mandala.svg)
+  background-image: url(../img/mandala.svg)
 }
-
-
 
 .card__face--back {
   transform: rotateY( 180deg );
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 250px 250px 250px;
-  grid-template-areas:
-    'bCTop'
-    'bCMid'
-    'bCBtm';
-  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
-  transition: background 3s;
+  grid-template-rows: 0 33% 0;
+  grid-template-areas: 'bCTop' 'bCMid' 'bCBtm';
+  grid-row-gap: 33%;
+  transition: grid-row-gap 3s;
+  animation: back-and-forth 5s 2s;
 }
 
-  .card__face--back:hover {
-    background: linear-gradient(to top, #ff99cc 100%, #33ccff 0%, );
+/* Works in combination with the CardFlip function in main.js */
+@keyframes back-and-forth {
+  /* Svg in the center */
+  0% {
+    grid-row-gap: 33%;    
   }
-
+  /* Svg moves towards the top of page */
+  33% {
+    grid-row-gap: 0%;
+    }
+  /* Svg moves towards the bottom of the page */
+  66% {
+    grid-row-gap: 66%;
+  }
+  /* Svg moves just past the center" */
+  85% {
+    grid-row-gap: 30%;
+  }
+  /* Svg gently moves to the center */
+  100% {
+    grid-row-gap: 33%;
+  }
+}
 
 .index__backCardTop {
   grid-area: bCTop;
 }
 
-
 .index__backCardMid {
-  background-image: url(./img/mandala.svg);
+  background-image: url(../img/mandala.svg);
   background-repeat: no-repeat;
   background-position: center;
   grid-area: bCMid;
 }
 
-
-
 .index__backCardBtm {
   grid-area: bCBtm;
 }
-
-svg:hover {
-  fill: red;
-}
-
 
 .card.is-flipped {
   transform: rotateY(180deg);
