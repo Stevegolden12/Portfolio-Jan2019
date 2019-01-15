@@ -42,11 +42,42 @@ body {
   background-image: url(./img/mandala.svg)
 }
 
+
+
 .card__face--back {
   transform: rotateY( 180deg );
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 250px 250px 250px;
+  grid-template-areas:
+    'bCTop'
+    'bCMid'
+    'bCBtm';
+  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+  transition: background 3s;
+}
+
+  .card__face--back:hover {
+    background: linear-gradient(to top, #ff99cc 100%, #33ccff 0%, );
+  }
+
+
+.index__backCardTop {
+  grid-area: bCTop;
+}
+
+
+.index__backCardMid {
   background-image: url(./img/mandala.svg);
   background-repeat: no-repeat;
   background-position: center;
+  grid-area: bCMid;
+}
+
+
+
+.index__backCardBtm {
+  grid-area: bCBtm;
 }
 
 svg:hover {
