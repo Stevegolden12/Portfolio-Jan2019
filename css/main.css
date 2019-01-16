@@ -3,6 +3,11 @@ body {
 
 }
 
+/* link hover underline reset */
+a:hover {
+  text-decoration: none;
+}
+
 .index__mainWrapper {
   display: grid;
   grid-template-columns: 2fr 3fr 1fr;
@@ -144,4 +149,54 @@ body {
 .fab {
   text-decoration: none;
   font-size: 5vmax;
+}
+
+/* Projects Page */
+.projects__mainWrapper {
+  display: grid;
+  grid-auto-columns: 83.4% 16.6%;
+  grid-auto-rows: auto 1fr;
+  grid-template-areas:
+  'productTitle productTitle'
+  'carouselProjects projectMainNav';
+  height: 100vh;
+}
+
+.projects__title {
+  grid-area: productTitle;
+  text-align: center;
+  font-size: 4vmax;
+}
+
+.projects__carouselProjects {
+  grid-area: carouselProjects;
+  display: grid;
+
+
+}
+
+.projects__react {
+  width: 40%;
+  margin: auto;
+}
+
+.projects__javaScript {
+}
+
+.projects__htmlCSS
+
+.projects__mainNav {
+  grid-area: projectMainNav;
+  text-decoration: none;
+}
+
+.projects__navLinks {
+  list-style: none;
+  padding: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  
 }
