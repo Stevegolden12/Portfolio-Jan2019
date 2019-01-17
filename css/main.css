@@ -3,10 +3,11 @@ body {
 
 }
 
-/* link hover underline reset */
+- /* link hover underline reset */
 a:hover {
   text-decoration: none;
 }
+
 
 .index__mainWrapper {
   display: grid;
@@ -152,13 +153,13 @@ a:hover {
 }
 
 /* Projects Page */
-.projects__mainWrapper {
+.projects__mainWrapper{
   display: grid;
   grid-auto-columns: 83.4% 16.6%;
   grid-auto-rows: auto 1fr;
   grid-template-areas:
-  'productTitle productTitle'
-  'carouselProjects projectMainNav';
+    'productTitle productTitle' 
+    'cardProjects projectsMainNav';
   height: 100vh;
 }
 
@@ -168,35 +169,48 @@ a:hover {
   font-size: 4vmax;
 }
 
-.projects__carouselProjects {
-  grid-area: carouselProjects;
+.projects__cardProjects {
+  grid-area: cardProjects;
   display: grid;
-
-
 }
 
 .projects__react {
-  width: 40%;
-  margin: auto;
+ 
+}
+
+.projects-card-layout {
+  display: inline-block;
+  padding-top: 10px;
+}
+
+.card-img-top {
+  height: 15%;
 }
 
 .projects__javaScript {
 }
 
-.projects__htmlCSS
+.projects__javaScriptWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.projects__htmlCSS {
+}
 
 .projects__mainNav {
-  grid-area: projectMainNav;
+  grid-area: projectsMainNav;
   text-decoration: none;
+  margin: 0 auto;
 }
 
 .projects__navLinks {
   list-style: none;
-  padding: none;
+  padding: 0;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-content: center;
-  
 }
