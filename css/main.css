@@ -240,17 +240,21 @@ a:hover {
   padding-left: 15px;
 }
 
-  .mainBlog__navItems:visited {
-    color: var(--visited-color);
-  }
+.mainBlog__navItems:visited {
+  color: var(--visited-color);
+}
 
-  .mainBlog__navItems:hover {
-    color: var(--hover-color);
-  }
+.mainBlog__navItems:hover {
+  color: var(--hover-color);
+}
 
 #main__headerLogo {
   width: 75px;
   height: 45px;
+}
+
+.mainBlog__blog-title {
+  grid-area: blogTitle;
 }
 
 .mainBlog__blogWrapper {
