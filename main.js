@@ -11,3 +11,5 @@ function cardFlip(){
 /* The function works with the animation/keyfrom in main.css */
 
 setTimeout(cardFlip, 1000);
+
+
