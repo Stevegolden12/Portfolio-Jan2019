@@ -159,17 +159,18 @@ li:hover {
 
   .fas:hover,
   .fab:hover {
+    text-decoration: none;
     font-size: 6vmax;
-    color: var(--navLogoColorHover);
+    color: var(--navLogoColorHover);    
   }
 
 /* Projects Page */
 .projects__mainWrapper{
   display: grid;
-  grid-auto-columns: 83.4% 16.6%;
+  grid-auto-columns: 90% 10%;
   grid-auto-rows: auto 1fr;
   grid-template-areas:
-    'productTitle productTitle' 
+    'productTitle projectsMainNav' 
     'cardProjects projectsMainNav';
   height: 100vh;
 }
@@ -213,8 +214,15 @@ li:hover {
 .projects__mainNav {
   grid-area: projectsMainNav;
   text-decoration: none;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
+
+.projects__mainNavWrapper {
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  height: 100%;
+}
+
 
 .projects__navLinks {
   list-style: none;
@@ -225,6 +233,7 @@ li:hover {
   justify-content: space-around;
   align-content: center;
 }
+
 
 /* blogMain.html small breakpoint desk/labtops*/
 .mainBlog_body {
