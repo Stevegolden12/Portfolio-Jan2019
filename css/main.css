@@ -1,6 +1,7 @@
 
 body {
-
+  --navLogoColor: hsl(188, 78%, 41%);
+  --navLogoColorHover: hsl(188, 78%, 33%);
 }
 
 - /* link hover underline reset */
@@ -153,7 +154,14 @@ li:hover {
 .fab {
   text-decoration: none;
   font-size: 5vmax;
+  color: var(--navLogoColor);
 }
+
+  .fas:hover,
+  .fab:hover {
+    font-size: 6vmax;
+    color: var(--navLogoColorHover);
+  }
 
 /* Projects Page */
 .projects__mainWrapper{
@@ -247,9 +255,16 @@ li:hover {
   text-decoration: none;
 }
 
-  .mainBlog__nav-list li a{
-    font-size: 7vmax;
-  }
+.mainBlog__nav-list li a {
+  font-size: 5vmax;
+  color: var(--navLogoColor);
+  text-decoration: none;
+}
+
+.mainBlog__nav-list li a:hover {
+  font-size: 6vmax;
+  color: var(--navLogoColorHover);
+}
 
 
   #mainBlog__LnavItems {
@@ -279,6 +294,7 @@ li:hover {
 .mainBlog__blog-title {
   text-align: center;
   font-size: 6vmax;
+  margin-bottom: 10px;
 }
 
 .mainBlog__blogWrapper {
@@ -286,6 +302,7 @@ li:hover {
 }
 
 .mainBlog__main-layout {
+  width: 95%;
   font-size: 1.5rem;
   height: 500px;
   margin: 0 auto;
@@ -294,6 +311,7 @@ li:hover {
   height: 20%;
   padding-bottom: 20px;
   margin-bottom: 30px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 }
 
 .mainBlog__main-layout h2 {
@@ -325,10 +343,10 @@ li:hover {
   list-style: none;
 }
 
-  .mainBlog__bodyText_listItem li {
-    text-align: center;
-    margin-left: -40px;
-  }
+.mainBlog__bodyText_listItem li {
+  text-align: center;
+  margin-left: -40px;
+}
 
 
 .MainBlog_codeText_brown {
@@ -443,6 +461,10 @@ code {
   .mainBlog__nav-list {
     flex-direction: column;
     height: 100vh;
+  }
+
+  .mainBlog__nav-list li:nth-child(n + 2){
+    padding-left: 8px;
   }
 
   .mainBlog__main-layout {
