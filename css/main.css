@@ -200,9 +200,7 @@ li:hover {
   max-height: 156px;
 }
 
-.projects__javaScript {
-}
-
+.projects__ReactWrapper,
 .projects__javaScriptWrapper {
   display: flex;
   flex-wrap: wrap;
