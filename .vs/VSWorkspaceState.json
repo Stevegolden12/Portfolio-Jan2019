@@ -3,8 +3,11 @@
     "",
     "\\css",
     "\\img",
+    "\\Projects",
+    "\\Projects\\PortfolioHomePage",
+    "\\Projects\\PortfolioHomePage\\img",
     "\\Prototype"
   ],
-  "SelectedNode": "\\css\\main.css",
+  "SelectedNode": "\\Projects\\PortfolioHomePage\\index.html",
   "PreviewInSolutionExplorer": false
 }
