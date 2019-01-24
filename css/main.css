@@ -181,13 +181,13 @@ li:hover {
   font-size: 4vmax;
 }
 
+.projects__sectionTitles{
+  font-size: 3vmax;
+}
+
 .projects__cardProjects {
   grid-area: cardProjects;
   display: grid;
-}
-
-.projects__react {
- 
 }
 
 .projects-card-layout {
@@ -201,7 +201,8 @@ li:hover {
 }
 
 .projects__ReactWrapper,
-.projects__javaScriptWrapper {
+.projects__javaScriptWrapper,
+.projects__htmlCSSWrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
